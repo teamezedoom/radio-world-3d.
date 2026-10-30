@@ -1,0 +1,81 @@
+/**
+ * Ciudades destacadas con sus coordenadas geográficas reales.
+ * Al elegir una ciudad se muestran las emisoras de Radio Browser registradas
+ * con coordenadas dentro de un radio de la ciudad (no se inventan emisoras).
+ */
+export interface City {
+  name: string
+  countryCode: string
+  lat: number
+  lng: number
+  aliases?: string[]
+}
+
+export const CITIES: City[] = [
+  { name: 'Bogotá', countryCode: 'CO', lat: 4.711, lng: -74.0721 },
+  { name: 'Medellín', countryCode: 'CO', lat: 6.2442, lng: -75.5812 },
+  { name: 'Cali', countryCode: 'CO', lat: 3.4516, lng: -76.532 },
+  { name: 'Barranquilla', countryCode: 'CO', lat: 10.9685, lng: -74.7813 },
+  { name: 'Cartagena', countryCode: 'CO', lat: 10.391, lng: -75.4794 },
+  { name: 'Nueva York', countryCode: 'US', lat: 40.7128, lng: -74.006, aliases: ['New York', 'NYC'] },
+  { name: 'Los Ángeles', countryCode: 'US', lat: 34.0522, lng: -118.2437, aliases: ['Los Angeles'] },
+  { name: 'Chicago', countryCode: 'US', lat: 41.8781, lng: -87.6298 },
+  { name: 'Miami', countryCode: 'US', lat: 25.7617, lng: -80.1918 },
+  { name: 'San Francisco', countryCode: 'US', lat: 37.7749, lng: -122.4194 },
+  { name: 'Toronto', countryCode: 'CA', lat: 43.6532, lng: -79.3832 },
+  { name: 'Montreal', countryCode: 'CA', lat: 45.5017, lng: -73.5673 },
+  { name: 'Ciudad de México', countryCode: 'MX', lat: 19.4326, lng: -99.1332, aliases: ['Mexico City', 'CDMX'] },
+  { name: 'Guadalajara', countryCode: 'MX', lat: 20.6597, lng: -103.3496 },
+  { name: 'La Habana', countryCode: 'CU', lat: 23.1136, lng: -82.3666, aliases: ['Havana'] },
+  { name: 'Caracas', countryCode: 'VE', lat: 10.4806, lng: -66.9036 },
+  { name: 'Quito', countryCode: 'EC', lat: -0.1807, lng: -78.4678 },
+  { name: 'Lima', countryCode: 'PE', lat: -12.0464, lng: -77.0428 },
+  { name: 'Santiago de Chile', countryCode: 'CL', lat: -33.4489, lng: -70.6693, aliases: ['Santiago'] },
+  { name: 'Buenos Aires', countryCode: 'AR', lat: -34.6037, lng: -58.3816 },
+  { name: 'Montevideo', countryCode: 'UY', lat: -34.9011, lng: -56.1645 },
+  { name: 'São Paulo', countryCode: 'BR', lat: -23.5505, lng: -46.6333, aliases: ['Sao Paulo'] },
+  { name: 'Río de Janeiro', countryCode: 'BR', lat: -22.9068, lng: -43.1729, aliases: ['Rio de Janeiro'] },
+  { name: 'Londres', countryCode: 'GB', lat: 51.5074, lng: -0.1278, aliases: ['London'] },
+  { name: 'Manchester', countryCode: 'GB', lat: 53.4808, lng: -2.2426 },
+  { name: 'Dublín', countryCode: 'IE', lat: 53.3498, lng: -6.2603, aliases: ['Dublin'] },
+  { name: 'París', countryCode: 'FR', lat: 48.8566, lng: 2.3522, aliases: ['Paris'] },
+  { name: 'Marsella', countryCode: 'FR', lat: 43.2965, lng: 5.3698, aliases: ['Marseille'] },
+  { name: 'Madrid', countryCode: 'ES', lat: 40.4168, lng: -3.7038 },
+  { name: 'Barcelona', countryCode: 'ES', lat: 41.3874, lng: 2.1686 },
+  { name: 'Lisboa', countryCode: 'PT', lat: 38.7223, lng: -9.1393, aliases: ['Lisbon'] },
+  { name: 'Berlín', countryCode: 'DE', lat: 52.52, lng: 13.405, aliases: ['Berlin'] },
+  { name: 'Hamburgo', countryCode: 'DE', lat: 53.5511, lng: 9.9937, aliases: ['Hamburg'] },
+  { name: 'Múnich', countryCode: 'DE', lat: 48.1351, lng: 11.582, aliases: ['Munich', 'München'] },
+  { name: 'Ámsterdam', countryCode: 'NL', lat: 52.3676, lng: 4.9041, aliases: ['Amsterdam'] },
+  { name: 'Bruselas', countryCode: 'BE', lat: 50.8503, lng: 4.3517, aliases: ['Brussels'] },
+  { name: 'Roma', countryCode: 'IT', lat: 41.9028, lng: 12.4964, aliases: ['Rome'] },
+  { name: 'Milán', countryCode: 'IT', lat: 45.4642, lng: 9.19, aliases: ['Milan', 'Milano'] },
+  { name: 'Viena', countryCode: 'AT', lat: 48.2082, lng: 16.3738, aliases: ['Vienna', 'Wien'] },
+  { name: 'Zúrich', countryCode: 'CH', lat: 47.3769, lng: 8.5417, aliases: ['Zurich'] },
+  { name: 'Praga', countryCode: 'CZ', lat: 50.0755, lng: 14.4378, aliases: ['Prague'] },
+  { name: 'Varsovia', countryCode: 'PL', lat: 52.2297, lng: 21.0122, aliases: ['Warsaw'] },
+  { name: 'Estocolmo', countryCode: 'SE', lat: 59.3293, lng: 18.0686, aliases: ['Stockholm'] },
+  { name: 'Atenas', countryCode: 'GR', lat: 37.9838, lng: 23.7275, aliases: ['Athens'] },
+  { name: 'Estambul', countryCode: 'TR', lat: 41.0082, lng: 28.9784, aliases: ['Istanbul'] },
+  { name: 'Moscú', countryCode: 'RU', lat: 55.7558, lng: 37.6173, aliases: ['Moscow'] },
+  { name: 'El Cairo', countryCode: 'EG', lat: 30.0444, lng: 31.2357, aliases: ['Cairo'] },
+  { name: 'Lagos', countryCode: 'NG', lat: 6.5244, lng: 3.3792 },
+  { name: 'Nairobi', countryCode: 'KE', lat: -1.2921, lng: 36.8219 },
+  { name: 'Johannesburgo', countryCode: 'ZA', lat: -26.2041, lng: 28.0473, aliases: ['Johannesburg'] },
+  { name: 'Dubái', countryCode: 'AE', lat: 25.2048, lng: 55.2708, aliases: ['Dubai'] },
+  { name: 'Bombay', countryCode: 'IN', lat: 19.076, lng: 72.8777, aliases: ['Mumbai'] },
+  { name: 'Nueva Delhi', countryCode: 'IN', lat: 28.6139, lng: 77.209, aliases: ['New Delhi', 'Delhi'] },
+  { name: 'Bangkok', countryCode: 'TH', lat: 13.7563, lng: 100.5018 },
+  { name: 'Singapur', countryCode: 'SG', lat: 1.3521, lng: 103.8198, aliases: ['Singapore'] },
+  { name: 'Yakarta', countryCode: 'ID', lat: -6.2088, lng: 106.8456, aliases: ['Jakarta'] },
+  { name: 'Manila', countryCode: 'PH', lat: 14.5995, lng: 120.9842 },
+  { name: 'Hong Kong', countryCode: 'HK', lat: 22.3193, lng: 114.1694 },
+  { name: 'Pekín', countryCode: 'CN', lat: 39.9042, lng: 116.4074, aliases: ['Beijing'] },
+  { name: 'Shanghái', countryCode: 'CN', lat: 31.2304, lng: 121.4737, aliases: ['Shanghai'] },
+  { name: 'Seúl', countryCode: 'KR', lat: 37.5665, lng: 126.978, aliases: ['Seoul'] },
+  { name: 'Tokio', countryCode: 'JP', lat: 35.6762, lng: 139.6503, aliases: ['Tokyo'] },
+  { name: 'Osaka', countryCode: 'JP', lat: 34.6937, lng: 135.5023 },
+  { name: 'Sídney', countryCode: 'AU', lat: -33.8688, lng: 151.2093, aliases: ['Sydney'] },
+  { name: 'Melbourne', countryCode: 'AU', lat: -37.8136, lng: 144.9631 },
+  { name: 'Auckland', countryCode: 'NZ', lat: -36.8485, lng: 174.7633 },
+]
